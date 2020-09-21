@@ -11,18 +11,18 @@ homeBtn.onclick = () => {
 
 
 let items = [
-    {id: '01',  title: 'Item 1', description: 'blahblahblah', price: 10},
-    {id: '02',  title: 'Item 2', description: 'blahblahblah', price: 15.99},
-    {id: '03',  title: 'Item 3', description: 'blahblahblah', price: 16.34},
-    {id: '04',  title: 'Item 4', description: 'blahblahblah', price: 17.99},
+    {id: '01',  title: 'Item 1', description: 'description one', price: 10},
+    {id: '02',  title: 'Item 2', description: 'two and three and four', price: 15.99},
+    {id: '03',  title: 'Item 3', description: 'really good choice', price: 16.34},
+    {id: '04',  title: 'Item 4', description: 'there was nothing peculiar about this', price: 17.99},
     {id: '05',  title: 'Item 5', description: 'blahblahblah', price: 20},
-    {id: '06',  title: 'Item 6', description: 'blahblahblah', price: 9.99},
-    {id: '07',  title: 'Item 7', description: 'blahblahblah', price: 16.34},
-    {id: '08',  title: 'Item 8', description: 'blahblahblah', price: 17.99},
-    {id: '09',  title: 'Item 9', description: 'blahblahblah', price: 20},
-    {id: '10',  title: 'Item 10', description: 'blahblahblah', price: 7.04},
-    {id: '11',  title: 'Item 11', description: 'blahblahblah', price: 8},
-    {id: '12',  title: 'Item 12', description: 'blahblahblah', price: 5}
+    {id: '06',  title: 'Item 6', description: 'unquestionable integrity', price: 9.99},
+    {id: '07',  title: 'Item 7', description: 'These example sentences are selected automatically from various online news sources', price: 16.34},
+    {id: '08',  title: 'Item 8', description: 'something that induces certainty or establishes validity', price: 17.99},
+    {id: '09',  title: 'Item 9', description: 'to give a resistant quality to', price: 20},
+    {id: '10',  title: 'Item 10', description: 'sometimes sugar or milk', price: 7.04},
+    {id: '11',  title: 'Item 11', description: 'the earliest attestation of the term in print', price: 8},
+    {id: '12',  title: 'Item 12', description: 'blahblahblah2', price: 5}    
 ];
 
 let cartArr = [];
@@ -40,7 +40,7 @@ function itemElementMaker (obj) {
 
     let itemDesc = document.createElement('p');
     itemDesc.className = 'card-text';
-    itemDesc.innerText = obj.desc;
+    itemDesc.innerText = obj.description;
 
     let price = document.createElement('h4');
     price.className = 'price';
@@ -63,6 +63,7 @@ function adding (arr, whereTo) {
 
     arr.forEach(element => {
         whereTo.append(itemElementMaker(element))
+        console.log(element);
     });
 
 }
